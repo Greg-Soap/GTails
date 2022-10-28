@@ -8,9 +8,8 @@
 
 .SearchBar {
   display: block;
-  width: 100%;
   padding: 0 25%;
-  background-color: $gray-500;
+  background-color: $gray-200;
   @media screen and (max-width: 480px) {
     width: 100vw;
     padding: 0;
@@ -20,15 +19,20 @@
     padding: 2rem 3rem;
     .Form {
       width: 100%;
+      @media screen and (max-width: 480px) {
+        width: auto;
+      }
       .Input {
         padding: 1rem 1.5rem;
         font-size: 1rem;
-        font-style: italic;
         width: 100%;
-        color: $white;
-        background-color: $black;
-        border: 1px solid $green-200;
-        border-radius: 10px;
+        color: $gray-900;
+        background-color: $white;
+        border: none;
+        border-radius: 5px;
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
@@ -82,6 +86,7 @@
         color: green;
         font-size: 1.1rem;
         letter-spacing: 2px;
+        height: auto;
         @media screen and (max-width: 480px) {
           font-size: 1.5rem;
         }
@@ -99,26 +104,24 @@
 }
 .Cards {
   display: flex;
-  padding: 0 2rem;
+  padding: 2rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 5px;
-  background-color: $white;
+  gap: 1rem;
+  background-color: $gray-200;
 }
 .Card {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 0.3rem;
-  width: 18%;
-  background-color: $black;
-  border-radius: 7px;
-  border: 1px solid green;
-  box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-  -webkit-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-  -moz-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
+  width: 19%;
+  background-color: $white;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   @media screen and (max-width: 480px) {
-    width: 100%;
+    width: 47%;
   }
   .CardTop {
     flex: 1;
@@ -130,28 +133,28 @@
   .CardBody {
     padding: 0.75rem;
     flex: 1;
-    background-color: $black;
+    background-color: $white;
     .Title {
       font-weight: 400;
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color: $black;
     }
     .Text {
       color: green;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       font-weight: 300;
       font-size: 0.9rem;
       margin: 0.2rem;
     }
   }
   .Btn {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     background-color: #017c01c7;
     color: $white;
     text-decoration: none;
-    border-radius: 0px 0px 6px 6px;
+    border-radius: 0px 0px 5px 5px;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -172,185 +175,8 @@
     color: $gray-900;
   }
 }
-.Login {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
-  background-color: $black;
-  height: calc(100vh - 60px);
-  gap: 2rem;
-  @media screen and (max-width: 480px) {
-    gap: 0;
-    padding-bottom: 2rem;
-    height: 100vh;
-  }
-  .Btn {
-    letter-spacing: 3px;
-    background-color: #017c01c7;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 1rem 1.5rem;
-    &:hover {
-      background-color: green;
-    }
-  }
-  .Wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    height: 50vh;
-    margin-bottom: 8%;
-    align-self: center;
-    justify-self: center;
-    box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    -webkit-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    -moz-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    @media screen and (max-width: 480px) {
-      width: 80%;
-      height: 50vh;
-      margin: 55% 1rem;
-    }
-    .Left {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      font-size: 3rem;
-      cursor: pointer;
-      color: $black;
-      align-self: center;
-      @media screen and (max-width: 900px) {
-        font-size: 2rem;
-      }
-      @media screen and (max-width: 480px) {
-        font-size: 1.2rem;
-      }
-    }
-    .Center {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      .Line {
-        width: 1px;
-        height: 80%;
-        background-color: green;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-      }
-      .Or {
-        border: 2px solid green;
-        border-radius: 50%;
-        padding: 10px;
-        letter-spacing: 2px;
-        z-index: 10;
-        color: $black;
-        background-color: $white;
-      }
-    }
-    .Right {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      font-size: 3rem;
-      align-self: center;
-      color: $black;
-      @media screen and (max-width: 900px) {
-        font-size: 2rem;
-      }
-      @media screen and (max-width: 480px) {
-        font-size: 1.2rem;
-      }
-    }
-  }
-}
-.Cocktail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: space-between;
-  background-color: $black;
-  height: calc(100vh - 60px);
-  gap: 2rem;
-  @media screen and (max-width: 480px) {
-    gap: 0;
-    padding-bottom: 2rem;
-    height: auto;
-  }
 
-  .Btn {
-    letter-spacing: 3px;
-    background-color: #017c01c7;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 1rem 1.5rem;
-    &:hover {
-      background-color: green;
-    }
-  }
-  .Wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    align-self: center;
-    justify-self: center;
-    box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    -webkit-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    -moz-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    @media screen and (max-width: 480px) {
-      width: 100%;
-      margin: 0 1rem;
-      flex-wrap: wrap;
-    }
-    .Img {
-      width: 50%;
-      flex: 1;
-      @media screen and (max-width: 480px) {
-        width: 100%;
-      }
-    }
-    .Info {
-      flex: 1;
-      display: flex;
-      padding: 1rem 0.5rem;
-      flex-direction: column;
-      .DrinkP {
-        font-weight: bold;
-        text-transform: capitalize;
-        line-height: 1.8;
-        font-weight: 300;
-        letter-spacing: 2px;
-        color: $white;
-        margin-bottom: 0.7rem;
-        .DrinkData {
-          background: #d4e6a5;
-          font-weight: bold;
-          letter-spacing: 1px;
-          word-break: keep-all;
-          padding: 0.25rem 0.5rem;
-          border-radius: 0.25rem;
-          color: #476a2e;
-          margin-right: 0.5rem;
-        }
-      }
-    }
-  }
-}
 .App {
   height: auto;
+  background-color: $gray-200;
 }

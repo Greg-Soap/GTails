@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Loader from "../Components/Loader";
 import "../styles/main.scss";
+import "../styles/Cocktail.scss";
 const SingleCocktail = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
@@ -74,22 +75,23 @@ const SingleCocktail = () => {
           <img className="Img" src={image} alt={name}></img>
           <div className="Info">
             <p className="DrinkP">
-              <span className="DrinkData">name :</span> {name}
+              <span className="DrinkData">name:</span> {name}
             </p>
             <p className="DrinkP">
-              <span className="DrinkData">category :</span> {category}
+              <span className="DrinkData">category:</span> {category}
             </p>
             <p className="DrinkP">
-              <span className="DrinkData">info :</span> {info}
+              <span className="DrinkData">info:</span> {info}
             </p>
             <p className="DrinkP">
-              <span className="DrinkData">glass :</span> {glass}
+              <span className="DrinkData">glass:</span> {glass}
             </p>
             <p className="DrinkP">
-              <span className="DrinkData">instructions :</span> {instructions}
+              <span className="DrinkData">instructions:</span>{" "}
+              <span className="Drink">{instructions}</span>
             </p>
             <p className="DrinkP">
-              <span className="DrinkData">ingredients :</span>
+              <span className="DrinkData">ingredients:</span>
               {ingredients.map((item, index) => {
                 return item ? (
                   <span className="DrinkData" key={index}>

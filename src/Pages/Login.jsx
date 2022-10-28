@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/main.scss";
+import "../styles/Login.scss";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";

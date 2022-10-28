@@ -13,13 +13,13 @@ const Card = ({ id, name, image, glass, category, type }) => {
           <p className="Text" style={{ fontWeight: "bold" }}>
             {category}
           </p>
-          <p className="Text">{glass}</p>
+          {/* <p className="Text">{glass}</p>
 
           <p className="Text" style={{ fontWeight: "200" }}>
             {type}
-          </p>
+          </p> */}
         </div>
-        <Link to={`/cocktail/${id}`} className="btn-link btn">
+        <Link to={`/cocktail/${id}`} className="btn-link Btn">
           Details
         </Link>
       </div>
