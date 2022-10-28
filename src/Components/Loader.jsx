@@ -5,9 +5,9 @@ import "../styles/main.scss";
 const Loader = () => {
   return (
     <React.Fragment>
-      <Container>
+      <div className="Loader">
         <Bars color="green" height={200} width={200} />
-      </Container>
+      </div>
     </React.Fragment>
   );
 };

@@ -3,12 +3,10 @@ import "../styles/main.scss";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { AiOutlineLogin } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-const Login = styled(Link)``;
-const Right = styled.div``;
-const Btn = styled.button``;
-const ThemeIcon = styled.div``;
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(true);
   return (
     <nav className="Navbar">
       <div className="Wrapper">
