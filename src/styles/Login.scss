@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
-  background-color: $black;
+  background-color: $gray-200;
   height: calc(100vh - 60px);
   gap: 2rem;
   @media screen and (max-width: 480px) {
@@ -32,11 +32,12 @@
     width: 70%;
     height: 50vh;
     margin-bottom: 8%;
+    background-color: $white;
     align-self: center;
     justify-self: center;
-    box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    -webkit-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
-    -moz-box-shadow: -1px -1px 9px 1px rgba(10, 153, 35, 0.82);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
     @media screen and (max-width: 480px) {
       width: 80%;
       height: 50vh;

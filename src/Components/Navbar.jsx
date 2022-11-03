@@ -27,7 +27,9 @@ const Navbar = () => {
             </button>
           </div>
           <Link className="Login" to="/Login">
-            <AiOutlineLogin style={{ fontSize: "1.5rem" }} />
+            <AiOutlineLogin
+              style={{ fontSize: "1.5rem", backgroundColor: "transparent" }}
+            />
           </Link>
         </div>
       </div>

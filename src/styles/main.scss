@@ -117,9 +117,10 @@
   width: 19%;
   background-color: $white;
   border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  // -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  // -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  // box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
   @media screen and (max-width: 480px) {
     width: 47%;
   }
