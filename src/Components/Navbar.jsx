@@ -17,19 +17,14 @@ const Navbar = () => {
           <div className="theme-icon">
             <button className="Btn" onClick={toggle}>
               {darkMode ? (
-                <BsFillSunFill
-                  style={{ color: "yellow", fontSize: "1.5rem" }}
-                />
+                <BsFillSunFill style={{ color: "white", fontSize: "1.5rem" }} />
               ) : (
-                <BsFillMoonFill style={{ fontSize: "1.5rem" }} />
+                <BsFillMoonFill
+                  style={{ fontSize: "1.5rem", color: "white" }}
+                />
               )}
             </button>
           </div>
-          <Link className="Login" to="/Login">
-            <AiOutlineLogin
-              style={{ fontSize: "1.5rem", backgroundColor: "transparent" }}
-            />
-          </Link>
         </div>
       </div>
     </nav>

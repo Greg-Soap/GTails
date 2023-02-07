@@ -1,19 +1,16 @@
+@import "./Colors";
 $themes: (
   light: (
-    textColor: #000,
-    bg: white,
-    logo: darkblue,
-    bgSoft: #f6f3f3,
-    textColorSoft: #555,
-    border: lightgray,
+    textColor: $gray-900,
+    bg: $blue-gray-50,
+    bgSoft: $white,
+    text: $blue-900,
   ),
   dark: (
-    textColor: whitesmoke,
-    bg: #222,
-    logo: white,
-    bgSoft: #333,
-    textColorSoft: lightgray,
-    border: #444,
+    textColor: $gray-50,
+    bg: $blue-A700,
+    bgSoft: $blue-A400,
+    text: $blue-50,
   ),
 );
 

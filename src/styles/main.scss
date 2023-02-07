@@ -1,4 +1,5 @@
 @import "Colors.scss";
+@import "../styles/theme.scss";
 * {
   padding: 0;
   margin: 0;
@@ -7,31 +8,33 @@
 // SEARCH BAR
 
 .SearchBar {
-  display: block;
-  padding: 0 25%;
-  background-color: $gray-200;
-  @media screen and (max-width: 480px) {
-    width: 100vw;
-    padding: 0;
-  }
-  .Wrapper {
-    display: flex;
-    padding: 2rem 3rem;
-    .Form {
-      width: 100%;
-      @media screen and (max-width: 480px) {
-        width: auto;
-      }
-      .Input {
-        padding: 1rem 1.5rem;
-        font-size: 1rem;
+  @include themify($themes) {
+    display: block;
+    padding: 0 25%;
+    background-color: themed("bg");
+    @media screen and (max-width: 480px) {
+      width: 100vw;
+      padding: 0;
+    }
+    .Wrapper {
+      display: flex;
+      padding: 2rem 3rem;
+      .Form {
         width: 100%;
-        color: $gray-900;
-        background-color: $white;
-        border: none;
-        border-radius: 5px;
-        &:focus {
-          outline: none;
+        @media screen and (max-width: 480px) {
+          width: auto;
+        }
+        .Input {
+          all: unset;
+          padding: 1rem 1.5rem;
+          font-size: 1rem;
+          width: 100%;
+          color: themed("textColor");
+          background-color: transparent;
+          border-radius: 5px;
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
@@ -40,7 +43,7 @@
 
 .Navbar {
   display: block;
-  background-color: $green-400;
+  background-color: #1e2842;
   box-shadow: 0px 7px 9px -3px rgba(0, 0, 0, 0.63);
   -webkit-box-shadow: 0px 7px 9px -3px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: 0px 7px 9px -3px rgba(0, 0, 0, 0.63);
@@ -56,15 +59,12 @@
       display: flex;
       align-items: center;
       gap: 5px;
-      .BrandName {
-        font-size: 1.5rem;
-        color: darkgreen;
-        font-weight: bold;
-      }
+
       .BrandSpan {
         font-weight: lighter;
-        color: lightgreen;
+        color: $white;
         font-size: 1.5rem;
+        font-weight: 700;
         letter-spacing: 2px;
         font-style: italic;
       }
@@ -82,102 +82,101 @@
           border: none;
         }
       }
-      .Login {
-        color: green;
-        font-size: 1.1rem;
-        letter-spacing: 2px;
-        height: auto;
-        @media screen and (max-width: 480px) {
+    }
+  }
+}
+.Loader {
+  @include themify($themes) {
+    height: calc(100vh);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: themed("bg");
+  }
+}
+.Cards {
+  @include themify($themes) {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: themed("bg");
+    @media screen and (max-width: 480px) {
+      padding: 1rem;
+    }
+    .Card {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 19%;
+      background-color: themed("bgSoft");
+      border-radius: 5px;
+      box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+      @media screen and (max-width: 480px) {
+        width: 47%;
+      }
+      .CardTop {
+        flex: 1;
+        .Img {
+          width: 100%;
+          border-radius: 5px 5px 0px 0px;
+        }
+      }
+      .CardBody {
+        padding: 0.75rem;
+        flex: 1;
+
+        .Title {
+          font-weight: 400;
           font-size: 1.5rem;
+          margin-bottom: 1rem;
+          letter-spacing: 1px;
+          color: themed("textColor");
+        }
+        .Text {
+          color: themed("text");
+          letter-spacing: 2px;
+          font-weight: 300;
+          font-size: 0.9rem;
+          margin: 0.2rem;
+        }
+      }
+      .Btn {
+        letter-spacing: 2px;
+        background-color: #1e2842;
+        color: $white;
+        text-decoration: none;
+        border-radius: 0px 0px 5px 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 1rem 1.5rem;
+        &:hover {
+          background-color: #1e2842;
         }
       }
     }
   }
 }
-.Loader {
-  height: calc(100vh);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  background-color: $gray-100;
-}
-.Cards {
-  display: flex;
-  padding: 2rem;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 1rem;
-  background-color: $gray-200;
-}
-.Card {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 19%;
-  background-color: $white;
-  border-radius: 5px;
-  // -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  // -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  // box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-  box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
-  @media screen and (max-width: 480px) {
-    width: 47%;
-  }
-  .CardTop {
-    flex: 1;
-    .Img {
-      width: 100%;
-      border-radius: 5px 5px 0px 0px;
-    }
-  }
-  .CardBody {
-    padding: 0.75rem;
-    flex: 1;
-    background-color: $white;
-    .Title {
-      font-weight: 400;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-      color: $black;
-    }
-    .Text {
-      color: green;
-      letter-spacing: 2px;
-      font-weight: 300;
-      font-size: 0.9rem;
-      margin: 0.2rem;
-    }
-  }
-  .Btn {
-    letter-spacing: 2px;
-    background-color: #017c01c7;
-    color: $white;
-    text-decoration: none;
-    border-radius: 0px 0px 5px 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 300;
-    padding: 1rem 1.5rem;
-    &:hover {
-      background-color: green;
-    }
-  }
-}
 .Page {
-  height: calc(100vh - 170px);
-  .page-text {
-    text-transform: capitalize;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 2px;
-    color: $gray-900;
+  @include themify($themes) {
+    height: calc(100vh - 170px);
+    .page-text {
+      text-transform: capitalize;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: 2px;
+      color: themed("textColor");
+    }
   }
 }
 
 .App {
-  height: auto;
-  background-color: $gray-200;
+  @include themify($themes) {
+    height: auto;
+    background-color: themed("bg");
+  }
 }

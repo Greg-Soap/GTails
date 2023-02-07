@@ -5,9 +5,10 @@
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    background-color: themed("logo");
+    background-color: themed("bg");
     height: calc(100vh - 60px);
     gap: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     @media screen and (max-width: 480px) {
       gap: 1rem;
       padding-bottom: 1rem;
@@ -16,7 +17,7 @@
 
     .Btn {
       letter-spacing: 3px;
-      background-color: #017c01c7;
+      background-color: #1e284262;
       color: white;
       text-decoration: none;
       cursor: pointer;
@@ -25,7 +26,7 @@
       font-weight: 300;
       padding: 1rem 1.5rem;
       &:hover {
-        background-color: green;
+        background-color: #1e28429c;
       }
     }
     .Wrapper {
@@ -41,12 +42,12 @@
       @media screen and (max-width: 480px) {
         width: 90%;
         margin: 0 1rem;
-        flex-wrap: wrap;
+        flex-direction: column;
       }
       .Img {
         width: 40%;
         padding-right: 0.5rem;
-        background-color: $white;
+        background-color: themed("bgSoft");
         flex: 1;
         object-fit: cover;
         border-radius: 5px 0px 0px 5px;
@@ -62,26 +63,26 @@
         padding: 1rem 0.5rem;
         flex-direction: column;
         border-radius: 5px;
-        background-color: $white;
+        background-color: themed("bgSoft");
         .DrinkP {
           font-weight: bold;
           text-transform: capitalize;
           line-height: 1.8;
           font-weight: 300;
           letter-spacing: 1px;
-          color: $black;
+          color: themed("textColor");
           display: flex;
           align-items: baseline;
           margin-bottom: 0.7rem;
           .DrinkData {
-            background: #d4e6a5;
+            background: #1e2842;
             font-weight: bold;
             align-self: center;
             letter-spacing: 1px;
             word-break: keep-all;
             padding: 0.25rem 0.5rem;
             border-radius: 0.25rem;
-            color: #476a2e;
+            color: $blue-50;
             margin-right: 0.5rem;
           }
         }
