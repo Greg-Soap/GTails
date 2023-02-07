@@ -1,15 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./Pages/App";
+import Home from "./Pages/Home";
 import SingleCocktail from "./Pages/Single";
 import Navbar from "./Components/Navbar";
-import "../styles/main.scss";
+import "./styles/main.scss";
+import { DarkModeContext } from "./Components/darkModeContext";
+import { useContext } from "react";
 const PageRoute = () => {
+  const { darkMode } = useContext(DarkModeContext);
   return (
-    <div className="theme-light">
+    <div className={`theme-${darkMode ? "dark" : "light"}`}>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<Home />} />
           <Route path="cocktail/:id" element={<SingleCocktail />} />
         </Routes>
       </Router>

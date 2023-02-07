@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/main.scss";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { AiOutlineLogin } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { DarkModeContext } from "./darkModeContext";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const { toggle, darkMode } = useContext(DarkModeContext);
   return (
     <nav className="Navbar">
       <div className="Wrapper">
@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
         <div className="Right">
           <div className="theme-icon">
-            <button className="Btn" onClick={() => setDarkMode(!darkMode)}>
+            <button className="Btn" onClick={toggle}>
               {darkMode ? (
                 <BsFillSunFill
                   style={{ color: "yellow", fontSize: "1.5rem" }}
