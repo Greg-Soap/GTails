@@ -1,9 +1,9 @@
 import React from "react";
 import Card from "./Card";
 import "../styles/main.scss";
-import { useGlobalContext } from "../ContextAPI";
+import { useGlobalContext } from "./ContextAPI";
 import Loader from "./Loader";
-const Cards = () => {
+export default function Cards() {
   const { cocktails, loading } = useGlobalContext();
 
   if (loading) {
@@ -12,20 +12,18 @@ const Cards = () => {
   if (cocktails.length < 1) {
     return (
       <div className="Page">
-        <h2 className="page-text">no cocktails matched your search criteria</h2>
+        <h2 className="page-text">no cocktails matches your search</h2>
       </div>
     );
   }
   return (
-    <React.Fragment>
-      <div className="Cards">
+    <>
+      <section className="Cards">
         {cocktails.map((cocktail) => {
           const { id } = cocktail;
           return <Card key={id} {...cocktail} />;
         })}
-      </div>
-    </React.Fragment>
+      </section>
+    </>
   );
-};
-
-export default Cards;
+}

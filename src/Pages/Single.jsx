@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import Loader from "../Components/Loader";
 import "../styles/main.scss";
 import "../styles/Cocktail.scss";
-const SingleCocktail = () => {
+export default function SingleCocktail() {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
   const [cocktail, setCocktail] = useState(null);
@@ -106,6 +106,4 @@ const SingleCocktail = () => {
       </section>
     );
   }
-};
-
-export default SingleCocktail;
+}

@@ -11,7 +11,6 @@ const Navbar = () => {
     <nav className="Navbar">
       <div className="Wrapper">
         <div className="BrandWrapper">
-          <div className="BrandName">Greg's</div>
           <span className="BrandSpan">Cocktails</span>
         </div>
         <div className="Right">

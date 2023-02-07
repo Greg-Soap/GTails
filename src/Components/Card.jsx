@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/main.scss";
-const Card = ({ id, name, image, glass, category, type }) => {
+
+export default function Card({ id, name, image, category }) {
   return (
-    <React.Fragment>
-      <div className="Card">
+    <>
+      <article className="Card">
         <div className="CardTop">
           <img className="Img" src={image} alt={name} />
         </div>
@@ -13,18 +14,11 @@ const Card = ({ id, name, image, glass, category, type }) => {
           <p className="Text" style={{ fontWeight: "bold" }}>
             {category}
           </p>
-          {/* <p className="Text">{glass}</p>
-
-          <p className="Text" style={{ fontWeight: "200" }}>
-            {type}
-          </p> */}
         </div>
         <Link to={`/cocktail/${id}`} className="btn-link Btn">
           Details
         </Link>
-      </div>
-    </React.Fragment>
+      </article>
+    </>
   );
-};
-
-export default Card;
+}

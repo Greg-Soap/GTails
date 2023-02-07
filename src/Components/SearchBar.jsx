@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import "../styles/main.scss";
-import { useGlobalContext } from "../ContextAPI";
+import { useGlobalContext } from "./ContextAPI";
 
-const SearchBar = () => {
+export default function SearchBar() {
   const { setSearch } = useGlobalContext();
 
   const searchValue = useRef("");
@@ -32,6 +32,4 @@ const SearchBar = () => {
       </div>
     </div>
   );
-};
-
-export default SearchBar;
+}
