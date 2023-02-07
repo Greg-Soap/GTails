@@ -74,6 +74,12 @@
           display: flex;
           align-items: baseline;
           margin-bottom: 0.7rem;
+          .contain {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+          }
           .DrinkData {
             background: #1e2842;
             font-weight: bold;

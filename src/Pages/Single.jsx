@@ -92,14 +92,16 @@ export default function SingleCocktail() {
             </p>
             <p className="DrinkP">
               <span className="DrinkData">ingredients:</span>
-              {ingredients.map((item, index) => {
-                return item ? (
-                  <span className="DrinkData" key={index}>
-                    {" "}
-                    {item}
-                  </span>
-                ) : null;
-              })}
+              <div className="contain">
+                {ingredients.map((item, index) => {
+                  return item ? (
+                    <span className="DrinkData" key={index}>
+                      {" "}
+                      {item}
+                    </span>
+                  ) : null;
+                })}
+              </div>
             </p>
           </div>
         </div>

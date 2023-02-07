@@ -99,7 +99,7 @@
   @include themify($themes) {
     display: flex;
     padding: 2rem;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
     background-color: themed("bg");
