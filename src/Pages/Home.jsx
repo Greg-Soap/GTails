@@ -1,14 +1,15 @@
 import React from "react";
-import SearchBar from "../Components/SearchBar";
-import Cards from "../Components/Cards";
+import SearchBar from "../Components/SearchBar"; // Import the SearchBar component
+import Cards from "../Components/Cards"; // Import the Cards component
 import "../styles/main.scss";
 
 export default function Home() {
   return (
     <>
+      {/*  Main section container  */}
       <section className="App">
-        <SearchBar />
-        <Cards />
+        <SearchBar /> {/* Render the SearchBar component */}
+        <Cards /> {/* Render the Cards component */}
       </section>
     </>
   );
